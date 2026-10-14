@@ -1,0 +1,39 @@
+/* 웹페이지 전체의 모든 요소에 border-box 적용 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f5f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #1e293b;
+}
+
+/* 회원 카드 스타일 */
+.member-card {
+    background-color: white;
+    border: 2px solid red;
+
+    /* 너비를 300px로 고정해보기 */
+    width: 300px;
+
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+/* 5. display 실습 테스트 */
+.test-btn {
+    display: inline-block;
+    /* 옆으로 나란히 배치되면서도 크기 조절이 가능해짐 */
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}

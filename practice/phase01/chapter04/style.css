@@ -1,0 +1,57 @@
+/* 4. 색상과 배경 설정 */
+body {
+    color: #334155;
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif; /* 글꼴 지정 */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* 텍스트 정렬 (가운데 정렬) */
+}
+
+/* 5. 폰트와 텍스트 속성 추가 */
+h1 {
+    font-size: 32px;   /* 글자 크기 */
+    font-weight: 700;  /* 글자 굵기 (두껍게) */
+}
+
+p {
+    line-height: 1.6;  /* 줄 간격 (읽기 편하게 넓혀줌) */
+}
+
+/* 3.2 클래스 선택자 예시 */
+.member-card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 3.3 아이디 선택자 예시 */
+#signup-form {
+    background-color: white;
+    border: 2px solid #cbd5e1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* 7. CSS 우선순위 테스트 */
+p {
+    color: blue;        /* 1순위: 태그 선택자 */
+}
+
+.notice {
+    color: green;       /* 2순위: 클래스 선택자 */
+}
+
+#important {
+    color: red;         /* 3순위: 아이디 선택자 (가장 구체적이어서 승리!) */
+}

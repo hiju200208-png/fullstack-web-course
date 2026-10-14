@@ -1,0 +1,74 @@
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    color: #334155;
+
+    background-color: #f8fafc;
+
+}
+
+header {
+
+    background-color: #1e293b;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.member-card {
+
+    background-color: white;
+
+}
+
+
+h1 {
+
+    font-size: 32px;
+
+}
+
+h2 {
+
+    color: #0f766e;
+
+}
+
+#signup-form {
+
+    background-color: #ecfeff;
+
+}
+
+.primary-button {
+
+    background-color: #0f766e;
+
+    color: white;
+
+}
+
+
+p {
+
+    color: blue;
+
+}
+
+.notice {
+
+    color: green;
+
+}
+
+#important-message {
+
+    color: red;
+
+}
+
