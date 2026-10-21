@@ -1,0 +1,361 @@
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #1f2937;
+    font-family:
+        Arial,
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        sans-serif;
+}
+
+/* 버튼과 입력 요소가 현재 글꼴을 사용하도록 설정 */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* 이미지가 부모 영역을 넘어가지 않도록 설정 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 전체 컨테이너 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+/* 페이지 상단: 모바일에서는 세로 배치 */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* 공통 버튼 */
+button {
+    max-width: 100%;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+.add-button {
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 700;
+}
+
+.add-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* 검색 영역 */
+.search-section {
+    margin-bottom: 32px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: white;
+    color: #111827;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+}
+
+.search-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #111827;
+    color: white;
+    font-weight: 700;
+}
+
+.search-button:hover {
+    background-color: #374151;
+}
+
+/* 회원 목록 제목 */
+.member-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.section-header span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/*
+ * Mobile First
+ * 모바일에서는 회원 카드를 1열로 표시
+ */
+.member-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* 회원 카드 */
+.member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile-blue {
+    background-color: #2563eb;
+}
+
+.profile-purple {
+    background-color: #7c3aed;
+}
+
+.profile-green {
+    background-color: #059669;
+}
+
+.profile-orange {
+    background-color: #ea580c;
+}
+
+.profile-pink {
+    background-color: #db2777;
+}
+
+.profile-navy {
+    background-color: #334155;
+}
+
+.member-info {
+    min-width: 0;
+}
+
+.member-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.member-title h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.email,
+.join-date {
+    overflow-wrap: anywhere;
+}
+
+.email {
+    margin: 0 0 6px;
+    color: #4b5563;
+}
+
+.join-date {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* 회원 상태 */
+.status {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status.active {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status.waiting {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status.inactive {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+/* 카드 하단 버튼 */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 10px 12px;
+}
+
+.detail-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.detail-button:hover {
+    background-color: #1d4ed8;
+}
+
+.edit-button {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.edit-button:hover {
+    background-color: #d1d5db;
+}
+
+/*
+ * 태블릿
+ * 화면 너비가 768px 이상이면 적용
+ */
+@media (min-width: 768px) {
+    .container {
+        padding: 48px 0;
+    }
+
+    .page-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .add-button {
+        width: auto;
+    }
+
+    .search-form {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(160px, 1fr) auto;
+        align-items: end;
+    }
+
+    .search-button {
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/*
+ * 데스크톱
+ * 화면 너비가 1024px 이상이면 적용
+ */
+@media (min-width: 1024px) {
+    .member-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

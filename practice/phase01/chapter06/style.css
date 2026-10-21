@@ -1,0 +1,129 @@
+/* 모든 요소의 크기에 padding과 border를 포함합니다. */
+* {
+    box-sizing: border-box;
+}
+
+/* 페이지 전체 기본 스타일 */
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+
+/* Header: 제목과 메뉴를 가로로 배치합니다. */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.site-header h1 {
+    margin: 0;
+}
+
+/* 메뉴 링크를 가로로 배치합니다. */
+.main-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.main-nav a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* 페이지의 주요 내용 */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* 검색창과 버튼을 가로로 배치합니다. */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+/* 검색창이 남는 공간을 차지합니다. */
+.toolbar input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    font: inherit;
+}
+
+/* 버튼의 공통 스타일 */
+button {
+    padding: 10px 16px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background-color: #2563eb;
+    color: white;
+
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* 회원 목록 제목 */
+#members h2 {
+    margin-top: 0;
+}
+
+/* 회원 카드 3개를 같은 너비의 3열로 배치합니다. */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* 개별 회원 카드 */
+.member-card {
+    padding: 20px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+.member-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.member-card p {
+    margin: 8px 0;
+    color: #475569;
+}
+
+/* 카드 안의 버튼을 가로로 배치합니다. */
+.card-actions {
+    display: flex;
+    gap: 8px;
+
+    margin-top: 16px;
+}
